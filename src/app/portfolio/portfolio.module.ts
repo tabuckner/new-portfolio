@@ -6,6 +6,11 @@ import { PortfolioComponent } from './portfolio.component';
 import { HeroComponent } from './hero/hero.component';
 import { SocialButtonsComponent } from './social-buttons/social-buttons.component';
 
+import { MatRippleModule } from '@angular/material/core';
+
+export const PORTFOLIO_MAT_IMPORTS = [
+  MatRippleModule
+];
 
 @NgModule({
   declarations: [
@@ -15,6 +20,7 @@ import { SocialButtonsComponent } from './social-buttons/social-buttons.componen
   ],
   imports: [
     CommonModule,
+    ...PORTFOLIO_MAT_IMPORTS,
     PortfolioRoutingModule
   ]
 })
