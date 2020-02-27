@@ -34,3 +34,11 @@ $portfolio-theme: mat-light-theme($portfolio-primary, $portfolio-accent, $portfo
 
 html, body { height: 100%; min-height: 300vh;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+section {
+  padding: 72px 48px;
+}
+
+img {
+  width: 100%;
+}
