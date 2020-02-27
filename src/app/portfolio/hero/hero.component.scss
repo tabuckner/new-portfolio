@@ -1,0 +1,13 @@
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0465DC 0%, #13F1FC 125%);
+  color: white;
+  padding: 0 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__subtitle {
+    font-weight: 300;
+  }
+}

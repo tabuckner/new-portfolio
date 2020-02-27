@@ -1,0 +1,13 @@
+@import "_variables";
+
+@mixin dat-transition($prop: all, $time: .3s) {
+  transition: $prop $time $easing;
+}
+
+@mixin mat-swift-in-out-transition() {
+  transition: all .4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@mixin dat-transition-all($time: .3s) {
+  transition: all $time $easing;
+}

@@ -21,6 +21,11 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss"
+              ]
+            },
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -28,7 +33,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -92,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/scss/styles.scss"
             ],
             "scripts": []
           }
