@@ -1,3 +1,4 @@
+@import '~@angular/material/theming';
 @import '_variables';
 $p-lg: 24px;
 
@@ -46,6 +47,7 @@ $p-lg: 24px;
         position: relative;
         border-radius: 36px;
         z-index: 3;
+        @include mat-elevation(3);
       }
 
       &::before {
@@ -59,6 +61,7 @@ $p-lg: 24px;
         transform: translate(-24px, -24px);
         border-radius: 36px;
         z-index: 1;
+        @include mat-elevation(1);
       }
 
       &::after {
@@ -72,6 +75,7 @@ $p-lg: 24px;
         transform: translate(24px, 24px);
         border-radius: 36px;
         z-index: 2;
+        @include mat-elevation(2);
       }
     }
   }
