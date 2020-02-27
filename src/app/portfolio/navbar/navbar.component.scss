@@ -1,0 +1,41 @@
+@import '~@angular/material/theming';
+@import '_variables';
+@import '_mixins.scss';
+
+.navbar {
+  background: transparent;
+  position: absolute;
+  width: calc(100% - (48px * 2));
+  height: 72px;
+  padding: 0 48px;
+  color: white;
+  @include dat-transition-all;
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__link {
+
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
+
+    .mat-button {
+      font-weight: 400;
+    }
+  }
+
+  &--floating {
+    position: fixed;
+    background: linear-gradient(135deg, transparentize($primary, 0.13) 0%, transparentize($secondary, 0.13) 100%);
+    background: linear-gradient(135deg, transparentize($primary, 0.0) 0%, transparentize($secondary, 0.0) 100%);
+    background: $primary;
+    height: 48px;
+    @include mat-elevation(6, $secondary, 0.66);
+    z-index: 999;
+  }
+}

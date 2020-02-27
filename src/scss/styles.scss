@@ -32,5 +32,5 @@ $portfolio-theme: mat-light-theme($portfolio-primary, $portfolio-accent, $portfo
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; min-height: 300vh;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
