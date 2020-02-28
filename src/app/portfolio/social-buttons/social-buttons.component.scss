@@ -1,3 +1,4 @@
+@import '~@angular/material/theming';
 @import "_variables.scss";
 @import "_mixins.scss";
 
@@ -17,6 +18,7 @@
     height: 54px;
     cursor: pointer;
     border-radius: 50%;
+    @include dat-transition-all;
 
     &::before {
       content: "";
@@ -39,6 +41,9 @@
     }
 
     &:hover {
+      @include mat-elevation(4, $secondary, 0.66);
+      transform: translateY(-1px);
+
       &::before {
         border-color: $secondary;
       }
