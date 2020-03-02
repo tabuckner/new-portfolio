@@ -1,0 +1,36 @@
+@import '_mixins.scss';
+
+.footer {
+  &__links {
+    background: #5B5A6D;
+    color: #A5ADB1;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 330px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      @include dat-transition-all;
+
+      &:hover {
+        color: lighten(#A5ADB1, 13%);
+      }
+    }
+  }
+
+  &__copyright {
+    background: #3F3D56;
+    color: #BDD3DF;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__name {
+      color: #13F1FC;
+    }
+  }
+}
