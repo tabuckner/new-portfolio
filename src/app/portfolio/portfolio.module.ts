@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const PORTFOLIO_MAT_IMPORTS = [
   MatButtonModule,
@@ -25,6 +26,7 @@ export const PORTFOLIO_MAT_IMPORTS = [
     NavbarComponent,
     AboutComponent,
     FooterComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,

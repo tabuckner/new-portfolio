@@ -1,0 +1,79 @@
+@import "_mixins.scss";
+
+.contact {
+  text-align: center;
+
+  &__text {
+    margin-top: 24px;
+    margin-bottom: 48px;
+
+    h2 {
+      font-size: 48px;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 0;
+      line-height: 28px;
+    }
+  }
+
+  &__cta {
+    .mat-raised-button {
+      background: #3f3d56;
+      color: white;
+      border-radius: 24px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 72px;
+    }
+  }
+
+  &__social-buttons {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social-button {
+    margin-right: 24px;
+    cursor: pointer;
+    @include dat-transition-all(.2s);
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .contact__social-button__icon {
+        transform: scale(1.05);
+
+        path {
+          fill: lighten(#3f3d56, 13%);
+        }
+      }
+    }
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      @include dat-transition-all(.2s);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      path {
+        fill: #3f3d56;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: #828282;
+    margin-bottom: 24px;
+  }
+}

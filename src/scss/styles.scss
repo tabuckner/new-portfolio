@@ -1,8 +1,8 @@
-@import './_variables';
+@import "./_variables";
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -11,7 +11,7 @@
 @include mat-core();
 
 // MD Palette Helper
-@import '~mdp-sass/mdp-sass';
+@import "~mdp-sass/mdp-sass";
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -23,7 +23,11 @@ $portfolio-accent: mat-palette(get-mat-palette($secondary));
 $portfolio-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$portfolio-theme: mat-light-theme($portfolio-primary, $portfolio-accent, $portfolio-warn);
+$portfolio-theme: mat-light-theme(
+  $portfolio-primary,
+  $portfolio-accent,
+  $portfolio-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -32,8 +36,14 @@ $portfolio-theme: mat-light-theme($portfolio-primary, $portfolio-accent, $portfo
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; min-height: 300vh;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 section {
   padding: 72px 48px;
