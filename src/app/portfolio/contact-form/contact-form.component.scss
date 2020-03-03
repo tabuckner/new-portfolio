@@ -1,0 +1,27 @@
+.contact-form {
+  &__content {
+    margin-bottom: 16px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+
+    textarea {
+      margin-top: 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__action {
+    width: 100%;
+
+    button {
+      width: 100%
+    }
+  }
+}

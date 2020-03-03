@@ -9,13 +9,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export const PORTFOLIO_MAT_IMPORTS = [
   MatButtonModule,
-  MatRippleModule
+  MatInputModule,
+  MatRippleModule,
+  MatDialogModule,
 ];
 
 @NgModule({
@@ -27,9 +34,12 @@ export const PORTFOLIO_MAT_IMPORTS = [
     AboutComponent,
     FooterComponent,
     ContactComponent,
+    ContactFormComponent,
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     ...PORTFOLIO_MAT_IMPORTS,
     PortfolioRoutingModule
   ]

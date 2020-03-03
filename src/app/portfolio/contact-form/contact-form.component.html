@@ -1,0 +1,33 @@
+<div class="contact-form">
+  <h1 class="contact-form__title" mat-dialog-title>Send Me A Message!</h1>
+  <div class="contact-form__content" mat-dialog-content>
+    <form [formGroup]="contactForm">
+      <div class="contact-form__input">
+        <mat-form-field class="example-full-width">
+          <!-- <mat-label>Name</mat-label> -->
+          <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div class="contact-form__input">
+        <mat-form-field class="example-full-width">
+          <!-- <mat-label>Email Address</mat-label> -->
+          <input matInput placeholder="Email Address" formControlName="email">
+        </mat-form-field>
+      </div>
+      <div class="contact-form__input">
+        <mat-form-field class="example-full-width">
+          <!-- <mat-label>Message</mat-label> -->
+          <textarea matInput placeholder="Message" formControlName="message"></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="contact-form__actions" mat-dialog-actions>
+    <div class="contact-form__action">
+      <button mat-raised-button color="primary" (click)="onSubmitModal()" cdkFocusInitial>Send</button>
+    </div>
+    <div class="contact-form__action">
+      <button mat-button (click)="onCancelModal()">Cancel</button>
+    </div>
+  </div>
+</div>
