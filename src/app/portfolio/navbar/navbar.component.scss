@@ -2,14 +2,27 @@
 @import '_variables';
 @import '_mixins.scss';
 
+$navbar-padding-h: 48px;
+
 .navbar {
   background: transparent;
-  position: absolute;
-  width: calc(100% - (48px * 2));
+  position: fixed;
+  width: calc(100% - (#{$navbar-padding-h} * 2));
   height: 72px;
-  padding: 0 48px;
+  padding: 0 $navbar-padding-h;
   color: white;
-  @include dat-transition-all;
+  transition: all .3s ease;
+
+  &__pseudo-background {
+    width: 100%;
+    height: 100%;
+    background: $primary;
+    margin-left: -48px;
+    margin-right: -48px;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
+  }
 
   &__links {
     display: flex;
@@ -31,8 +44,6 @@
 
   &--floating {
     position: fixed;
-    background: linear-gradient(135deg, transparentize($primary, 0.13) 0%, transparentize($secondary, 0.13) 100%);
-    background: linear-gradient(135deg, transparentize($primary, 0.0) 0%, transparentize($secondary, 0.0) 100%);
     background: $primary;
     height: 48px;
     @include mat-elevation(6, $secondary, 0.66);

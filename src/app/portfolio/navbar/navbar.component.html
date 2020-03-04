@@ -1,4 +1,6 @@
-<header class="navbar" [ngClass]="{'navbar--floating': isFloating}">
+<header class="navbar" [ngClass]="{'navbar--floating': isFloating}" [ngStyle]="{'height.px': currentNavbarHeight}">
+  <!-- {{currentNavbarOpacity}} -->
+  <div class="navbar__pseudo-background" [ngStyle]="{'opacity': currentNavbarOpacity}"></div>
   <div class="navbar__links">
     <div class="navbar__link">
       <button mat-button>

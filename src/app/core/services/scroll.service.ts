@@ -1,19 +1,35 @@
 import { Injectable } from '@angular/core';
-import { fromEvent, Observable, BehaviorSubject } from 'rxjs';
-import { throttleTime, map, distinctUntilChanged, tap } from 'rxjs/operators';
+import { fromEvent, Observable, BehaviorSubject, Subject } from 'rxjs';
+import { throttleTime, map, distinctUntilChanged, tap, pairwise } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
   public scrollPosition = new BehaviorSubject<number>(0);
+  public pixelsScrolledUp = new Subject<number>();
+  public pixelsScrolledDown = new Subject<number>();
 
   constructor() {
     fromEvent(window, 'scroll').pipe(
-      throttleTime(10),
+      // throttleTime(10),
       map(() => window.pageYOffset),
       distinctUntilChanged(),
-      map(val => this.scrollPosition.next(val))
+      tap(val => this.scrollPosition.next(val)),
+      pairwise(),
+      tap((val) => {
+        const [previous, next] = val;
+        const difference = Math.abs(previous - next);
+        if (previous > next) {
+          // going up
+          this.pixelsScrolledUp.next(difference);
+          // console.warn('up', difference);
+        } else {
+          // going down
+          this.pixelsScrolledDown.next(difference);
+          // console.warn('down', difference);
+        }
+      }),
     ).subscribe();
 
     setTimeout(() => {
