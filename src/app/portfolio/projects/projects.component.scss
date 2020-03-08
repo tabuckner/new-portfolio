@@ -1,0 +1,63 @@
+@import '~@angular/material/theming';
+
+.projects {
+  background-image: url('/assets/img/background/projects.png'); // TODO: Do Not Use An Image!
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  &__heading {
+    margin-top: 200px;
+    margin-bottom: 96px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 64px;
+  }
+
+  &__project {
+
+    &__hero {
+      height: 144px;
+      display: flex;
+      flex-direction: column-reverse;
+      background: #03CED9;
+      color: white;
+      margin-top: -16px !important;
+      margin-left: -16px;
+      margin-right: -16px;
+      padding: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  &__card {
+    overflow: hidden;
+
+    &:hover {
+      @include mat-elevation(8);
+    }
+  }
+
+  .mat-card-content {
+    padding-top: 16px;
+  }
+
+  .mat-card-actions {
+    display: flex;
+    justify-content: center;
+    color: #03CED9;
+  }
+}

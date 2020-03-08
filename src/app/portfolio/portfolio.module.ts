@@ -9,11 +9,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 export const PORTFOLIO_MAT_IMPORTS = [
   MatButtonModule,
+  MatCardModule,
   MatRippleModule
 ];
 
@@ -25,6 +28,7 @@ export const PORTFOLIO_MAT_IMPORTS = [
     NavbarComponent,
     AboutComponent,
     ResumeComponent,
+    ProjectsComponent,
   ],
   imports: [
     CommonModule,
