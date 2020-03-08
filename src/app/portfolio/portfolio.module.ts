@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { AboutComponent } from './about/about.component';
+import { ResumeComponent } from './resume/resume.component';
 
 export const PORTFOLIO_MAT_IMPORTS = [
   MatButtonModule,
@@ -23,6 +24,7 @@ export const PORTFOLIO_MAT_IMPORTS = [
     SocialButtonsComponent,
     NavbarComponent,
     AboutComponent,
+    ResumeComponent,
   ],
   imports: [
     CommonModule,

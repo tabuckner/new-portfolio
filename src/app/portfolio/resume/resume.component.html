@@ -1,0 +1,25 @@
+<section class="resume">
+  <header class="resume__header">
+    <h2 class="resume__title">Resume</h2>
+    <h3 class="resume__subtitle">The Last Few Years</h3>
+  </header>
+  <div class="resume__items">
+    <div class="resume__item" *ngFor="let item of resumeItems; let i = index;"
+      [ngClass]="{'resume__item--right': i % 2 !== 0}">
+      <div class="resume__item__place">
+        <div class="resume__item__orb"></div>
+        <div class="resume__item__name">{{ item.businessName }}</div>
+        <div class="resume__item__position">{{ item.position }}</div>
+        <div class="resume__item__years">{{ item.years }}</div>
+      </div>
+      <div class="resume__item__description">
+        <p *ngIf="item.description?.simple">
+          {{ item.description.simple }}
+        </p>
+        <ul *ngIf="item.description?.items && item.description?.items.length > 0">
+          <li *ngFor="let bullet of item.description.items">{{ bullet }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
