@@ -11,3 +11,9 @@
 @mixin dat-transition-all($time: .3s) {
   transition: all $time $easing;
 }
+
+@mixin truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

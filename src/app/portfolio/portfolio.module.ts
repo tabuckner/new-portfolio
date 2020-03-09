@@ -1,28 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PortfolioRoutingModule } from './portfolio-routing.module';
-import { PortfolioComponent } from './portfolio.component';
-import { HeroComponent } from './hero/hero.component';
-import { SocialButtonsComponent } from './social-buttons/social-buttons.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
+import { PortfolioRoutingModule } from './portfolio-routing.module';
+import { PortfolioComponent } from './portfolio.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
-import { FooterComponent } from './footer/footer.component';
+import { SocialButtonsComponent } from './social-buttons/social-buttons.component';
+import { ResumeComponent } from './resume/resume.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+
 
 export const PORTFOLIO_MAT_IMPORTS = [
-  MatButtonModule,
   MatInputModule,
-  MatRippleModule,
   MatDialogModule,
+  MatButtonModule,
+  MatCardModule,
+  MatRippleModule
 ];
 
 @NgModule({
@@ -32,9 +36,11 @@ export const PORTFOLIO_MAT_IMPORTS = [
     SocialButtonsComponent,
     NavbarComponent,
     AboutComponent,
-    FooterComponent,
     ContactComponent,
     ContactFormComponent,
+    ResumeComponent,
+    ProjectsComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,

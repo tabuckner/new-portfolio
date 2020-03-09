@@ -1,0 +1,26 @@
+<section class="projects">
+  <header class="projects__heading">
+    <h2 class="projects__title">
+      Projects
+    </h2>
+  </header>
+  <div class="projects__grid">
+    <div class="projects__project" *ngFor="let project of projects">
+      <mat-card class="mat-elevation-z3 projects__card">
+        <div class="projects__project__hero">
+          <div class="projects__project__title">{{ project.title }}</div>
+          <div class="projects__project__img">
+            <img src="" alt="">
+          </div>
+        </div>
+        <mat-card-content>
+          {{ project.description }}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="onClickSource(project)">Source</button>
+          <button mat-button (click)="onClickLiveDemo(project)" [disabled]="!project.demoUrl">Live Demo</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>

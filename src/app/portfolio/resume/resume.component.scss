@@ -1,0 +1,88 @@
+@import '~@angular/material/theming';
+@import '_variables';
+
+.resume {
+  color: $middle-blue;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 160px;
+  }
+
+  &__title {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-size: 36px;
+    font-weight: 300;
+  }
+
+  &__items {
+    max-width: 900px;
+    padding-left: 44px;
+    padding-right: 44px;
+    margin: auto;
+  }
+
+  &__item {
+    margin-bottom: 144px;
+
+    &--right {
+      text-align: right;
+      direction: rtl;
+
+      ul {
+        text-align: right;
+        list-style-position: inside;
+      }
+
+      .resume__item__orb {
+        right: 0;
+        transform: translateX(44px);
+      }
+    }
+
+    &__place {
+      position: relative;
+    }
+
+    &__orb {
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      background: radial-gradient(#1BE9F3, #68F6FD);
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform: translateX(-44px);
+      @include mat-elevation(3, #1BE9F3);
+    }
+
+    &__name {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__position {
+      font-size: 18px;
+      opacity: .66;
+      margin-bottom: 4px;
+    }
+
+    &__years {
+      font-size: 14px;
+      opacity: .66;
+    }
+
+    &__description {
+      color: $light-grey;
+      max-width: 500px;
+
+      ul {
+        padding: 0;
+      }
+    }
+  }
+}
