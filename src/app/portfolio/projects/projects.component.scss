@@ -1,10 +1,15 @@
 @import '~@angular/material/theming';
 
 .projects {
-  background-image: url('/assets/img/background/projects.png'); // TODO: Do Not Use An Image!
+  position: relative;
+  // background-image: url('/assets/img/background/projects.png'); // TODO: Do Not Use An Image!
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
+
+  * {
+    z-index: 1;
+  }
 
   &__heading {
     margin-top: 200px;
@@ -59,5 +64,60 @@
     display: flex;
     justify-content: center;
     color: #03CED9;
+  }
+
+  svg {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    circle {
+      &:first-of-type {
+        animation: float 30s ease infinite;
+      }
+
+      &:nth-of-type(2) {
+        animation: float 30s ease infinite;
+      }
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  20% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  30% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  40% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  50% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  60% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  70% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  80% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px) scale(random(1));
+  }
+  90% {
+    transform: translate(#{random(10) - 5}px, #{random(10) - 5}px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
