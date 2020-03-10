@@ -2,7 +2,7 @@
 @import "_mixins.scss";
 @import "_functions.scss";
 
-.skills {
+.stack {
   background: url('/assets/img/background/skills.svg');
   background-size: cover;
   background-position: center;
@@ -47,7 +47,7 @@
         box-shadow: 0 4px 20px rgba(255, 255, 255, .66);
         transform: scale(1.05);
 
-        .skills__grid__tile {
+        .stack__grid__tile {
 
           &__inset {
             transform: rotateY(180deg);

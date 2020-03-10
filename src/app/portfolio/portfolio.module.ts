@@ -19,7 +19,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-import { SkillsComponent } from './skills/skills.component';
+import { StackComponent } from './stack/stack.component';
 
 
 export const PORTFOLIO_MAT_IMPORTS = [
@@ -42,7 +42,7 @@ export const PORTFOLIO_MAT_IMPORTS = [
     ResumeComponent,
     ProjectsComponent,
     FooterComponent,
-    SkillsComponent,
+    StackComponent,
   ],
   imports: [
     CommonModule,

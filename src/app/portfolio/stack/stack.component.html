@@ -1,13 +1,13 @@
-<section id="skills" class="skills">
-  <header class="skills__header">
-    <h2 class="skills__title">My Stack</h2>
+<section id="stack" class="stack">
+  <header class="stack__header">
+    <h2 class="stack__title">My Stack</h2>
   </header>
-  <div class="skills__grid">
-    <div class="skills__grid__tile" *ngFor="let skill of skills">
-      <div class="skills__grid__tile__inset">
-        <div class="skills__grid__tile__background"></div>
-        <div class="skills__grid__tile__logo" [ngStyle]="{'backgroundImage': 'url('+skill.imageUrl+')'}"></div>
-        <div class="skills__grid__tile__details">
+  <div class="stack__grid">
+    <div class="stack__grid__tile" *ngFor="let skill of skills">
+      <div class="stack__grid__tile__inset">
+        <div class="stack__grid__tile__background"></div>
+        <div class="stack__grid__tile__logo" [ngStyle]="{'backgroundImage': 'url('+skill.imageUrl+')'}"></div>
+        <div class="stack__grid__tile__details">
           {{ skill.name }}
         </div>
       </div>
