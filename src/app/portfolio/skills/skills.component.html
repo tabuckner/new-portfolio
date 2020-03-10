@@ -1,0 +1,27 @@
+<section id="skills" class="skills">
+  <header class="skills__header">
+    <h2 class="skills__title">My Stack</h2>
+  </header>
+  <div class="skills__grid">
+    <div class="skills__grid__tile" *ngFor="let skill of skills">
+      <div class="skills__grid__tile__inset">
+        <div class="skills__grid__tile__background"></div>
+        <div class="skills__grid__tile__logo" [ngStyle]="{'backgroundImage': 'url('+skill.imageUrl+')'}"></div>
+        <div class="skills__grid__tile__details">
+          {{ skill.name }}
+        </div>
+      </div>
+    </div>
+    <svg width="34" height="676" viewBox="0 0 34 676" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path
+        d="M1.54972e-05 676L2.38419e-07 6.00002C2.38419e-07 2.6863 2.68629 1.95503e-05 6 1.95503e-05H27.6906C31.1227 1.95503e-05 33.8555 2.87368 33.6831 6.30141L1.54972e-05 676Z"
+        fill="url(#paint0_linear)" />
+      <defs>
+        <linearGradient id="paint0_linear" x1="17" y1="676" x2="17" y2="1.95503e-05" gradientUnits="userSpaceOnUse">
+          <stop stop-color="white" stop-opacity="0.33" />
+          <stop offset="1" stop-color="white" stop-opacity="0.66" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</section>

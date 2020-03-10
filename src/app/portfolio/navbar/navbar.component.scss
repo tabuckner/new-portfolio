@@ -12,6 +12,7 @@ $navbar-padding-h: 48px;
   padding: 0 $navbar-padding-h;
   color: white;
   transition: all .3s ease;
+  z-index: 999;
 
   &__pseudo-background {
     width: 100%;

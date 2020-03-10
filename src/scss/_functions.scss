@@ -1,0 +1,10 @@
+@function grid-column-auto-width($col-count) {
+  $return-val: '';
+  @for $i from 1 through $col-count {
+    $return-val: '#{$return-val}minmax(0, 1fr)';
+    @if ($i != $col-count) {
+      $return-val: '#{$return-val} ';
+    }
+  }
+  @return #{$return-val};
+}
