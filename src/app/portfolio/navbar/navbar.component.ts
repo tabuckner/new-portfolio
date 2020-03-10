@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ScrollService } from 'src/app/core/services/scroll.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   private currentScrollPosition = 0;
 
 
-  constructor(private scrollPosition: ScrollService) { }
+  constructor(private scrollPosition: ScrollService,
+              private scroller: ViewportScroller) { }
 
   ngOnInit(): void {
     this.currentNavbarHeight = this.expandedNavbarHeight;
@@ -47,6 +49,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
         this.currentNavbarOpacity = this.collapsedNavbarBgOpacity;
       }
     });
+  }
+
+  public onClickNavItem(anchor: string) {
+    this.scroller.scrollToAnchor(anchor);
   }
 
   private increaseOpacity(pixelsScrolled: number) {

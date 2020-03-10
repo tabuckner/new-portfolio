@@ -3,27 +3,27 @@
   <div class="navbar__pseudo-background" [ngStyle]="{'opacity': currentNavbarOpacity}"></div>
   <div class="navbar__links">
     <div class="navbar__link">
-      <a mat-button href="#about">
+      <a mat-button (click)="onClickNavItem('about')">
         About
       </a>
     </div>
     <div class="navbar__link">
-      <a mat-button href="#stack">
+      <a mat-button (click)="onClickNavItem('stack')">
         Stack
       </a>
     </div>
     <div class="navbar__link">
-      <a mat-button href="#resume">
+      <a mat-button (click)="onClickNavItem('resume')">
         Resume
       </a>
     </div>
     <div class="navbar__link">
-      <a mat-button href="#projects">
+      <a mat-button (click)="onClickNavItem('projects')">
         Projects
       </a>
     </div>
     <div class="navbar__link">
-      <a mat-button href="#contact">
+      <a mat-button (click)="onClickNavItem('contact')">
         Contact
       </a>
     </div>
