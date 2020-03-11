@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
@@ -24,6 +25,7 @@ import { StackComponent } from './stack/stack.component';
 
 export const PORTFOLIO_MAT_IMPORTS = [
   MatInputModule,
+  MatIconModule,
   MatDialogModule,
   MatButtonModule,
   MatCardModule,
