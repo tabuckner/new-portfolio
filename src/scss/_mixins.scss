@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_breakpoints";
 
 @mixin dat-transition($prop: all, $time: .3s) {
   transition: $prop $time $easing;
@@ -16,4 +17,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin desktop-only {
+  @media screen and (max-width: $laptop) {
+    display: none;
+  }
+}
+
+@mixin hide-desktop {
+  @media screen and (min-width: #{$laptop + 1}) {
+    display: none;
+  }
 }

@@ -36,27 +36,8 @@ $portfolio-theme: mat-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-section {
-  padding: 72px 48px;
-}
-
-img {
-  width: 100%;
-}
+@import "./_globals.scss";
+@import "./_utility-classes.scss";
 
 .mat-dialog-container {
   background-color: white;

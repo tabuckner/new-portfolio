@@ -2,6 +2,11 @@
 @import "_mixins.scss";
 @import "_functions.scss";
 
+$cell-size: 100px;
+$cell-padding: 16px;
+$grid-gap: 24px;
+$cell-box-size: $cell-size + (2 * $cell-padding);
+
 .stack {
   background: url('/assets/img/background/skills.svg');
   background-size: cover;
@@ -20,28 +25,37 @@
     font-weight: 600;
   }
 
+  &__info {
+    color: white;
+    opacity: .66;
+    font-weight: 300;
+  }
+
   &__grid {
     position: relative;
     display: grid;
-    grid-template-columns: 132px 132px 132px 132px 132px;
-    grid-gap: 24px;
+    grid-template-columns: $cell-box-size $cell-box-size $cell-box-size $cell-box-size $cell-box-size;
+    grid-template-columns: repeat(auto-fill, $cell-box-size);
+    grid-gap: $grid-gap;
     justify-items: center;
     align-items: center;
-    max-width: #{132px * 5 + 24px * 4};
+    justify-content: center;
+    align-items: center;
+    max-width: $cell-box-size * 5 + $grid-gap * 4;
     margin-left: auto;
     margin-right: auto;
 
     &__tile {
-      height: 100px;
-      width: 100px;
-      padding: 16px;
+      height: $cell-size;
+      width: $cell-size;
+      padding: $cell-padding;
       border-radius: 24px;
       display: flex;
       background: white;
       box-shadow: 0 4px 15px rgba(255, 255, 255, .66);
       @include dat-transition-all;
       cursor: pointer;
-      perspective: 100px;
+      perspective: $cell-size;
 
       &:hover {
         box-shadow: 0 4px 20px rgba(255, 255, 255, .66);
@@ -80,8 +94,8 @@
 
       &__details {
         position: absolute;
-        width: calc(100% - 16px);
-        height: calc(100% - 16px);
+        width: calc(100% - #{$cell-padding});
+        height: calc(100% - #{$cell-padding});
         backface-visibility: hidden;
         border-radius: 24px;
         transform: rotateY(180deg);
@@ -91,7 +105,7 @@
         background: $middle-blue;
         color: white;
         text-align: center;
-        padding: 8px;
+        padding: #{$cell-padding / 2};
       }
     }
 
@@ -114,6 +128,8 @@
       font-size: 14px;
       letter-spacing: 1.22px;
       z-index: 0;
+
+      @include desktop-only;
     }
   }
 }

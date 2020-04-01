@@ -1,0 +1,10 @@
+@import "_mixins.scss";
+
+.desktop-only {
+  @include desktop-only;
+}
+
+.hide-desktop {
+  @include hide-desktop;
+}
+
