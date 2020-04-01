@@ -1,3 +1,5 @@
+@import "_mixins";
+
 .hero {
   min-height: 100vh;
   background: linear-gradient(135deg, #0465DC 0%, #13F1FC 125%);
@@ -16,5 +18,33 @@
 
   &__subtitle {
     font-weight: 300;
+  }
+}
+
+@include on-tablet-and-below {
+  .hero {
+    display: block;
+    text-align: center;
+    padding-top: 96px;
+
+    &__text {
+      margin-bottom: 36px;
+    };
+
+    &__subtitle {
+      margin-bottom: 24px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__right {
+      width: 100%;
+    }
+
+    &__social {
+      display: inline-flex;
+    }
   }
 }
