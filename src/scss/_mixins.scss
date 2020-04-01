@@ -43,6 +43,12 @@
   }
 }
 
+@mixin on-tablet-and-above {
+  @media screen and (min-width: #{$tablet + 1}) {
+    @content;
+  }
+}
+
 @mixin on-tablet-and-below {
   @media screen and (max-width: $tablet) {
     @content;

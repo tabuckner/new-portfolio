@@ -74,7 +74,7 @@
   }
 }
 
-@include on-mobile-and-below {
+@include on-tablet-and-below {
   .projects {
     background: linear-gradient(112.54deg, #0470DC 5.9%, #70DDFF 109.01%);
   }
