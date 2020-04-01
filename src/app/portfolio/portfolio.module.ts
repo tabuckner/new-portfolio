@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortfolioComponent } from './portfolio.component';
@@ -21,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { StackComponent } from './stack/stack.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 
 export const PORTFOLIO_MAT_IMPORTS = [
@@ -29,7 +31,8 @@ export const PORTFOLIO_MAT_IMPORTS = [
   MatDialogModule,
   MatButtonModule,
   MatCardModule,
-  MatRippleModule
+  MatRippleModule,
+  MatSidenavModule
 ];
 
 @NgModule({
@@ -45,6 +48,7 @@ export const PORTFOLIO_MAT_IMPORTS = [
     ProjectsComponent,
     FooterComponent,
     StackComponent,
+    MobileMenuComponent,
   ],
   imports: [
     CommonModule,

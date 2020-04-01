@@ -8,3 +8,11 @@
   @include hide-desktop;
 }
 
+.show-tablet-and-below {
+  @include show-tablet-and-below;
+}
+
+.hide-tablet-and-below {
+  @include hide-tablet-and-below;
+}
+

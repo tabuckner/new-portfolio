@@ -1,0 +1,27 @@
+.mobile-menu {
+
+  &__links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #0465DC 0%, #13F1FC 125%);
+    color: white;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+
+    .mat-button {
+      width: 100%;
+      font-size: 18px;
+      line-height: 44px;
+
+      .mat-button-wrapper {
+        line-height: 44px;
+      }
+    }
+  }
+}

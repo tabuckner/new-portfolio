@@ -30,3 +30,21 @@
     display: none;
   }
 }
+
+@mixin hide-tablet-and-below {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+@mixin show-tablet-and-below {
+  @media screen and (min-width: #{$tablet + 1}) {
+    display: none;
+  }
+}
+
+@mixin on-tablet-and-below {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}

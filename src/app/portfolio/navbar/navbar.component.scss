@@ -13,6 +13,10 @@ $navbar-padding-h: 48px;
   color: white;
   transition: all .3s ease;
   z-index: 999;
+  @include on-tablet-and-below {
+    display: flex;
+    align-items: center;
+  }
 
   &__pseudo-background {
     width: 100%;
@@ -25,11 +29,17 @@ $navbar-padding-h: 48px;
     transition: all .3s ease;
   }
 
+  &__hamburger {
+    @include show-tablet-and-below;
+  }
+
   &__links {
     display: flex;
     justify-content: flex-end;
     height: 100%;
     align-items: center;
+
+    @include hide-tablet-and-below;
   }
 
   &__link {

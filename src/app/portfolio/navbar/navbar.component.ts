@@ -1,6 +1,8 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ScrollService } from 'src/app/core/services/scroll.service';
-import { ViewportScroller } from '@angular/common';
+import { SidenavToggleService } from 'src/app/core/services/sidenav-toggle.service';
+import { NavigationService } from 'src/app/core/services/navigation.service';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-navbar',
@@ -18,10 +20,11 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   private expandedNavbarHeight = 48 * 2; // in PX
   private expandedNavbarBgOpacity = 0;
   private currentScrollPosition = 0;
-
+  @ViewChild('hamburger', {read: ElementRef}) private hamburgerButton: ElementRef;
 
   constructor(private scrollPosition: ScrollService,
-              private scroller: ViewportScroller) { }
+              private navigation: NavigationService,
+              private sidenavToggle: SidenavToggleService) { }
 
   ngOnInit(): void {
     this.currentNavbarHeight = this.expandedNavbarHeight;
@@ -52,7 +55,12 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   public onClickNavItem(anchor: string) {
-    this.scroller.scrollToAnchor(anchor);
+    this.navigation.onClickNavItem(anchor);
+  }
+
+  public onClickMenu() {
+    this.sidenavToggle.toggle();
+    this.hamburgerButton.nativeElement.blur();
   }
 
   private increaseOpacity(pixelsScrolled: number) {
