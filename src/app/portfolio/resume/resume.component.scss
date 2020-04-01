@@ -29,13 +29,21 @@
   &__item {
     margin-bottom: 144px;
 
+    ul {
+      margin-left: 16px;
+
+      li {
+        margin-bottom: 4px;
+      }
+    }
+
     &--right {
       text-align: right;
       direction: rtl;
 
       ul {
         text-align: right;
-        list-style-position: inside;
+        margin-right: 16px;
       }
 
       .resume__item__orb {

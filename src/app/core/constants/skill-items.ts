@@ -52,6 +52,12 @@ export const SKILL_ITEMS: SkillItemModel[] = [
     preference: PreferenceLevels.best
   },
   {
+    name: 'Ionic',
+    imageUrl: '/assets/img/skills/ionic.png',
+    experience: ExperienceLevels.better,
+    preference: PreferenceLevels.good
+  },
+  {
     name: 'Jest',
     imageUrl: '/assets/img/skills/jest.png',
     experience: ExperienceLevels.better,
@@ -64,10 +70,22 @@ export const SKILL_ITEMS: SkillItemModel[] = [
     preference: PreferenceLevels.good
   },
   {
+    name: 'Capacitor',
+    imageUrl: '/assets/img/skills/capacitor.png',
+    experience: ExperienceLevels.average,
+    preference: PreferenceLevels.better
+  },
+  {
     name: 'Vue',
     imageUrl: '/assets/img/skills/vue.png',
     experience: ExperienceLevels.average,
     preference: PreferenceLevels.better
+  },
+  {
+    name: 'Scully',
+    imageUrl: '/assets/img/skills/scully.png',
+    experience: ExperienceLevels.average,
+    preference: PreferenceLevels.best
   },
   {
     name: 'Nuxt.JS',
@@ -86,6 +104,18 @@ export const SKILL_ITEMS: SkillItemModel[] = [
     imageUrl: '/assets/img/skills/protractor.png',
     experience: ExperienceLevels.best,
     preference: PreferenceLevels.best
+  },
+  {
+    name: 'JWT Based Auth',
+    imageUrl: '/assets/img/skills/jwt.png',
+    experience: ExperienceLevels.better,
+    preference: PreferenceLevels.better
+  },
+  {
+    name: 'Firebase',
+    imageUrl: '/assets/img/skills/firebase.png',
+    experience: ExperienceLevels.good,
+    preference: PreferenceLevels.better
   },
   {
     name: 'Gulp',
