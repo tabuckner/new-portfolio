@@ -70,8 +70,8 @@ export const SKILL_ITEMS: SkillItemModel[] = [
     preference: PreferenceLevels.good
   },
   {
-    name: 'Capacitor',
-    imageUrl: '/assets/img/skills/capacitor.png',
+    name: 'Socket.IO',
+    imageUrl: '/assets/img/skills/socket-io.svg',
     experience: ExperienceLevels.average,
     preference: PreferenceLevels.better
   },
