@@ -2,22 +2,40 @@
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0465DC 0%, #13F1FC 125%);
+  // background: linear-gradient(135deg, #0465dc 0%, #13f1fc 125%);
+  position: relative;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20%;
 
   &__left {
     width: 50%;
+    z-index: 1;
   }
 
   &__right {
     width: 50%;
+    z-index: 1;
   }
 
   &__subtitle {
     font-weight: 300;
+  }
+
+  &__pseudo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -29,7 +47,7 @@
 
     &__text {
       margin-bottom: 36px;
-    };
+    }
 
     &__subtitle {
       margin-bottom: 24px;

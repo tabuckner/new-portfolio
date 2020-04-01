@@ -8,9 +8,9 @@ $grid-gap: 24px;
 $cell-box-size: $cell-size + (2 * $cell-padding);
 
 .stack {
-  background: url('/assets/img/background/skills.svg');
+  background: url('/assets/img/background/stack.svg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   padding-top: 200px;
   padding-bottom: 200px;
 

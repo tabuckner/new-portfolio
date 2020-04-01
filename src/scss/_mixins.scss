@@ -48,3 +48,9 @@
     @content;
   }
 }
+
+@mixin on-mobile-and-below {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
