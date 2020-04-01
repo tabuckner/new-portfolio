@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { fromEvent, Observable, BehaviorSubject, Subject } from 'rxjs';
-import { throttleTime, map, distinctUntilChanged, tap, pairwise } from 'rxjs/operators';
+import { map, distinctUntilChanged, tap, pairwise } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +39,10 @@ export class ScrollService {
 
   public get scrollPosition$(): Observable<number> {
     return this.scrollPosition.asObservable();
+  }
+
+  public getScrollPosition(): number {
+    return window.scrollY;
   }
 
 }

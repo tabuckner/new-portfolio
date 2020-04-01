@@ -2,7 +2,6 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { ScrollService } from 'src/app/core/services/scroll.service';
 import { SidenavToggleService } from 'src/app/core/services/sidenav-toggle.service';
 import { NavigationService } from 'src/app/core/services/navigation.service';
-import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-navbar',
@@ -29,29 +28,45 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.currentNavbarHeight = this.expandedNavbarHeight;
     this.currentNavbarOpacity = this.expandedNavbarBgOpacity;
+
+    this.currentScrollPosition = this.scrollPosition.getScrollPosition();
+    if (this.navbarShouldBeFullyExpanded) {
+      this.currentNavbarHeight = this.collapsedNavbarHeight;
+      this.currentNavbarOpacity = this.collapsedNavbarBgOpacity;
+    }
   }
 
   ngAfterViewInit() {
     this.scrollPosition.scrollPosition$.subscribe(val => {
       this.currentScrollPosition = val;
     });
+
     this.scrollPosition.pixelsScrolledUp.subscribe((val) => {
-      if (this.currentScrollPosition >= 0 && this.currentScrollPosition <= this.expandedNavbarHeight) {
+      if (this.shouldUpdateNavbar) {
         this.growHeight(val);
         this.decreaseOpacity(val);
       }
     });
+
     this.scrollPosition.pixelsScrolledDown.subscribe((val) => {
-      if (this.currentScrollPosition >= 0 && this.currentScrollPosition <= this.expandedNavbarHeight) {
+      if (this.shouldUpdateNavbar) {
         this.shrinkHeight(val);
         this.increaseOpacity(val);
       }
 
-      if (this.currentScrollPosition >= this.expandedNavbarHeight) {
+      if (this.navbarShouldBeFullyExpanded) {
         this.currentNavbarHeight = this.collapsedNavbarHeight;
         this.currentNavbarOpacity = this.collapsedNavbarBgOpacity;
       }
     });
+  }
+
+  private get shouldUpdateNavbar() {
+    return this.currentScrollPosition >= 0 && this.currentScrollPosition <= this.expandedNavbarHeight;
+  }
+
+  private get navbarShouldBeFullyExpanded() {
+    return this.currentScrollPosition >= this.expandedNavbarHeight;
   }
 
   public onClickNavItem(anchor: string) {
