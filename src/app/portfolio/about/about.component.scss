@@ -1,5 +1,7 @@
 @import '~@angular/material/theming';
 @import '_variables';
+@import '_mixins';
+
 $p-lg: 24px;
 
 .about {
@@ -77,6 +79,28 @@ $p-lg: 24px;
         z-index: 2;
         @include mat-elevation(2);
       }
+    }
+  }
+}
+
+@include on-tablet-and-below {
+  .about {
+    text-align: center;
+
+    &__left {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 62px;
+    }
+
+    &__right {
+      width: 100%;
+      padding: 0;
+    }
+
+    &__bio {
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
