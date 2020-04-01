@@ -1,5 +1,5 @@
 <div class="social-buttons">
-  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'">
+  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'" (click)="onClickSocialButton(github)">
     <div class="social-buttons__button__icon">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -7,8 +7,9 @@
           fill="white" />
       </svg>
     </div>
+    <a href="https://github.com/tabuckner" class="social-buttons__social-button__link hidden" #github></a>
   </div>
-  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'">
+  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'" (click)="onClickSocialButton(linkedin)">
     <div class="social-buttons__button__icon">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0)">
@@ -29,8 +30,9 @@
         </defs>
       </svg>
     </div>
+    <a href="https://www.linkedin.com/in/taylorabuckner" class="social-buttons__social-button__link hidden" #linkedin></a>
   </div>
-  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'">
+  <div class="social-buttons__button" matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'" (click)="onClickSocialButton(medium)">
     <div class="social-buttons__button__icon">
       <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0)">
@@ -45,5 +47,6 @@
         </defs>
       </svg>
     </div>
+    <a href="https://medium.com/@taylora.buckner" class="social-buttons__social-button__link" #medium></a>
   </div>
 </div>

@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { FormspreeService } from 'src/app/core/services/formspree.service';
 import { ContactFormDataModel } from 'src/app/core/interfaces/contact-form-data-model';
+import { ExternalLinkService } from 'src/app/core/services/external-link.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,21 +13,13 @@ import { ContactFormDataModel } from 'src/app/core/interfaces/contact-form-data-
 export class ContactComponent implements OnInit {
   private dialogRef: MatDialogRef<ContactFormComponent>
   constructor(private dialog: MatDialog,
-              private formspree: FormspreeService) { }
+              private formspree: FormspreeService,
+              private externalLink: ExternalLinkService) { }
 
   ngOnInit(): void {}
 
   public onClickSocialButton(linkRef: any): void {
-    if (!linkRef || !linkRef.href) {
-      return;
-    }
-    const currentUrl = window.location.href;
-    const buttonHref = linkRef.href;
-    if (currentUrl.indexOf(buttonHref) > -1) {
-      return;
-    }
-
-    window.open(buttonHref, '_blank');
+    return this.externalLink.redirectToTemplateAnchor(linkRef);
   }
 
   public onClickCta() {
