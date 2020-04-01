@@ -1,7 +1,8 @@
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
+@import "_mixins";
 
 .projects {
-  background-image: url('/assets/img/background/projects.png'); // TODO: Do Not Use An Image!
+  background-image: url("/assets/img/background/projects.png"); // TODO: Do Not Use An Image!
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -20,17 +21,20 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 64px;
+    margin: auto;
+    max-width: #{250px * 4 + 48px * 3};
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    grid-gap: 48px;
   }
 
   &__project {
-
     &__hero {
       height: 144px;
       display: flex;
       flex-direction: column-reverse;
-      background: #03CED9;
+      background: #03ced9;
       color: white;
       margin-top: -16px !important;
       margin-left: -16px;
@@ -58,6 +62,14 @@
   .mat-card-actions {
     display: flex;
     justify-content: center;
-    color: #03CED9;
+    color: #03ced9;
+  }
+}
+
+@include on-tablet-and-below {
+  .projects {
+    &__heading {
+      margin-top: 0;
+    }
   }
 }
