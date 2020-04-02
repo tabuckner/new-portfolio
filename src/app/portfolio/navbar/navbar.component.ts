@@ -76,6 +76,9 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   public onClickMenu() {
     this.sidenavToggle.toggle();
     this.hamburgerButton.nativeElement.blur();
+    setTimeout(() => {
+      this.sidenavToggle.setShouldAnimate(true);
+    });
   }
 
   private increaseOpacity(pixelsScrolled: number) {

@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav [opened]="sidenavOpened" (closed)="onClosed()" [autoFocus]="false">
+  <mat-sidenav [opened]="sidenavOpened" (closed)="onClosed()" (closedStart)="onClosedStart()" [autoFocus]="false">
     <app-mobile-menu></app-mobile-menu>
   </mat-sidenav>
   <mat-sidenav-content>

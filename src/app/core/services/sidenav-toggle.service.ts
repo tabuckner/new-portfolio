@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SidenavToggleService {
   isOpened = new BehaviorSubject<boolean>(false);
+  shouldAnimate = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 
@@ -16,5 +17,9 @@ export class SidenavToggleService {
 
   public setIsOpened(nextState: boolean) {
     this.isOpened.next(nextState);
+  }
+
+  public setShouldAnimate(nextState: boolean) {
+    this.shouldAnimate.next(nextState);
   }
 }

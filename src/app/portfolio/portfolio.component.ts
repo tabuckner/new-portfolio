@@ -29,4 +29,7 @@ export class PortfolioComponent implements OnInit {
     this.sidenavToggle.setIsOpened(false);
   }
 
+  public onClosedStart() {
+    this.sidenavToggle.setShouldAnimate(false);
+  }
 }
