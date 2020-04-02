@@ -1,19 +1,19 @@
 <section class="contact" id="contact">
   <div class="contact__text">
-    <h2>Contact</h2>
-    <h4>
+    <h2 data-aos="fade-up" data-aos-anchor=".contact__text" data-aos-delay="0">Contact</h2>
+    <h4 data-aos="fade-up" data-aos-anchor=".contact__text" data-aos-delay="100">
       Want to know more or just chat?
       <br>
       Feel free!
     </h4>
   </div>
-  <div class="contact__cta">
+  <div class="contact__cta" data-aos="fade-up" data-aos-anchor=".contact__text" data-aos-delay="200">
     <button mat-raised-button matRipple [matRippleColor]="'rgba(255, 255, 255, .13)'" matRippleUnbounded="false" (click)="onClickCta()">
       Send A Message
     </button>
   </div>
   <div class="contact__social-buttons">
-    <div class="contact__social-button" (click)="onClickSocialButton(linkedin)">
+    <div class="contact__social-button" (click)="onClickSocialButton(linkedin)" data-aos="fade-up" data-aos-anchor=".contact__social-buttons" data-aos-delay="0">
       <a href="https://www.linkedin.com/in/taylorabuckner" class="contact__social-button__link hidden" #linkedin></a>
       <div class="contact__social-button__icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
         </svg>
       </div>
     </div>
-    <div class="contact__social-button" (click)="onClickSocialButton(github)">
+    <div class="contact__social-button" (click)="onClickSocialButton(github)" data-aos="fade-up" data-aos-anchor=".contact__social-buttons" data-aos-delay="100">
       <a href="https://github.com/tabuckner" class="contact__social-button__link" #github></a>
       <div class="contact__social-button__icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@
         </svg>
       </div>
     </div>
-    <div class="contact__social-button" (click)="onClickSocialButton(medium)">
+    <div class="contact__social-button" (click)="onClickSocialButton(medium)" data-aos="fade-up" data-aos-anchor=".contact__social-buttons" data-aos-delay="200">
       <a href="https://medium.com/@taylora.buckner" class="contact__social-button__link" #medium></a>
       <div class="contact__social-button__icon">
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@
         </svg>
       </div>
     </div>
-    <div class="contact__social-button" (click)="onClickSocialButton(reddit)">
+    <div class="contact__social-button" (click)="onClickSocialButton(reddit)" data-aos="fade-up" data-aos-anchor=".contact__social-buttons" data-aos-delay="300">
       <a href="https://www.reddit.com/user/tabuckner91/" class="contact__social-button__link" #reddit></a>
       <div class="contact__social-button__icon">
         <svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@
         </svg>
       </div>
     </div>
-    <div class="contact__social-button" (click)="onClickSocialButton(codepen)">
+    <div class="contact__social-button" (click)="onClickSocialButton(codepen)" data-aos="fade-up" data-aos-anchor=".contact__social-buttons" data-aos-delay="400">
       <a href="https://codepen.io/tabuckner" class="contact__social-button__link" #codepen></a>
       <div class="contact__social-button__icon">
         <svg width="24" height="24" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,8 +98,8 @@
     </div>
   </div>
   <div class="contact__subtitle">
-    Like me on
+    <span data-aos="fade-up" data-aos-anchor=".contact__subtitle" data-aos-delay="0">Like me on</span>
     <br>
-    Linkedin, Github, Medium, Reddit, and Codepen.
+    <span data-aos="fade-up" data-aos-anchor=".contact__subtitle" data-aos-delay="100">Linkedin, Github, Medium, Reddit, and Codepen.</span>
   </div>
 </section>

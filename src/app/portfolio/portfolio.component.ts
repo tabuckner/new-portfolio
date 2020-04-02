@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidenavToggleService } from '../core/services/sidenav-toggle.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,11 @@ export class PortfolioComponent implements OnInit {
   constructor(private sidenavToggle: SidenavToggleService) { }
 
   ngOnInit(): void {
+    AOS.init({
+      once: true,
+      easing: 'swift-in-out',
+      duration: 500
+    });
     this.sidenavToggle.isOpened.subscribe(nextState => {
       this.sidenavOpened = nextState;
     });

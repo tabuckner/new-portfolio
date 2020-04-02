@@ -1,10 +1,14 @@
 <section id="stack" class="stack">
   <header class="stack__header">
-    <h2 class="stack__title">My Stack</h2>
-    <h3 class="stack__info hide-desktop">Sorted by Experience and Preference</h3>
+    <h2 class="stack__title" data-aos="fade-up" data-aos-anchor=".stack__header" data-aos-delay="100">My Stack</h2>
+    <h3 class="stack__info hide-desktop" data-aos="fade-up" data-aos-anchor=".stack__header" data-aos-delay="200">Sorted by Experience and Preference</h3>
   </header>
   <div class="stack__grid">
-    <div class="stack__grid__tile" *ngFor="let skill of skills">
+    <div class="stack__grid__tile"
+      *ngFor="let skill of skills; let i = index;"
+      data-aos="fade-up"
+      data-aos-anchor=".stack__grid"
+      [attr.data-aos-delay]="(i + 1) * 50">
       <div class="stack__grid__tile__inset">
         <div class="stack__grid__tile__background"></div>
         <div class="stack__grid__tile__logo" [ngStyle]="{'backgroundImage': 'url('+skill.imageUrl+')'}"></div>
@@ -13,7 +17,7 @@
         </div>
       </div>
     </div>
-    <svg width="34" height="676" viewBox="0 0 34 676" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="desktop-only">
+    <svg width="34" height="676" viewBox="0 0 34 676" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="desktop-only" data-aos="fade-in">
       <path
         d="M1.54972e-05 676L2.38419e-07 6.00002C2.38419e-07 2.6863 2.68629 1.95503e-05 6 1.95503e-05H27.6906C31.1227 1.95503e-05 33.8555 2.87368 33.6831 6.30141L1.54972e-05 676Z"
         fill="rgba(255, 255, 255, .33)" />

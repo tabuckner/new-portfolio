@@ -1,23 +1,24 @@
 <section class="resume" id="resume">
   <header class="resume__header">
-    <h2 class="resume__title">Resume</h2>
-    <h3 class="resume__subtitle">The Last Few Years</h3>
+    <h2 class="resume__title" data-aos="fade-up" data-aos-anchor=".resume__header" data-aos-delay="0">Resume</h2>
+    <h3 class="resume__subtitle" data-aos="fade-up" data-aos-anchor=".resume__header" data-aos-delay="100">The Last Few Years</h3>
   </header>
   <div class="resume__items">
-    <div class="resume__item" *ngFor="let item of resumeItems; let i = index;"
+    <div class="resume__item"
+      *ngFor="let item of resumeItems; let i = index;"
       [ngClass]="{'resume__item--right': i % 2 !== 0}">
       <div class="resume__item__place">
-        <div class="resume__item__orb"></div>
-        <div class="resume__item__name">{{ item.businessName }}</div>
-        <div class="resume__item__position">{{ item.position }}</div>
-        <div class="resume__item__years">{{ item.years }}</div>
+        <div class="resume__item__orb" data-aos="fade-up" data-aos-delay=""></div>
+        <div class="resume__item__name" data-aos="fade-up" data-aos-delay="">{{ item.businessName }}</div>
+        <div class="resume__item__position" data-aos="fade-up" data-aos-delay="">{{ item.position }}</div>
+        <div class="resume__item__years" data-aos="fade-up" data-aos-delay="">{{ item.years }}</div>
       </div>
       <div class="resume__item__description">
-        <p *ngIf="item.description?.simple">
+        <p *ngIf="item.description?.simple" data-aos="fade-up" data-aos-delay="">
           {{ item.description.simple }}
         </p>
         <ul *ngIf="item.description?.items && item.description?.items.length > 0">
-          <li *ngFor="let bullet of item.description.items">{{ bullet }}</li>
+          <li *ngFor="let bullet of item.description.items" data-aos="fade-up" data-aos-delay="">{{ bullet }}</li>
         </ul>
       </div>
     </div>

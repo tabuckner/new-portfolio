@@ -43,3 +43,13 @@ $portfolio-theme: mat-light-theme(
   background-color: white;
   background: url('/assets/img/background/modal-alt.svg') !important;
 }
+
+/**
+ * AOS Overrides
+**/
+[data-aos] {
+  body[data-aos-easing="swift-in-out"] &,
+  &[data-aos][data-aos-easing="swift-in-out"] {
+    transition-timing-function: cubic-bezier(.77, 0, .175, 1);
+  }
+}

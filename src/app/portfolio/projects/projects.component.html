@@ -1,11 +1,15 @@
 <section class="projects" id="projects">
   <header class="projects__heading">
-    <h2 class="projects__title">
+    <h2 class="projects__title" data-aos="fade-up">
       Projects
     </h2>
   </header>
   <div class="projects__grid">
-    <div class="projects__project" *ngFor="let project of projects">
+    <div class="projects__project"
+      *ngFor="let project of projects; let i = index;"
+      data-aos="fade-up"
+      data-aos-anchor=".projects__grid"
+      [attr.data-aos-delay]="(i + 1) * 100">
       <mat-card class="mat-elevation-z3 projects__card">
         <div class="projects__project__hero">
           <div class="projects__project__title">{{ project.title }}</div>

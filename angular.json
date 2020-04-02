@@ -33,7 +33,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/scss/styles.scss"
+              "src/scss/styles.scss",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": []
           },
