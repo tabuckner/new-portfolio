@@ -53,3 +53,11 @@ $portfolio-theme: mat-light-theme(
     transition-timing-function: cubic-bezier(.77, 0, .175, 1);
   }
 }
+
+.aos-init {
+  visibility: hidden;
+}
+
+.aos-animate {
+  visibility: visible;
+}

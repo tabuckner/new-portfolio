@@ -8,17 +8,17 @@
       *ngFor="let item of resumeItems; let i = index;"
       [ngClass]="{'resume__item--right': i % 2 !== 0}">
       <div class="resume__item__place">
-        <div class="resume__item__orb" data-aos="fade-up" data-aos-delay=""></div>
-        <div class="resume__item__name" data-aos="fade-up" data-aos-delay="">{{ item.businessName }}</div>
-        <div class="resume__item__position" data-aos="fade-up" data-aos-delay="">{{ item.position }}</div>
-        <div class="resume__item__years" data-aos="fade-up" data-aos-delay="">{{ item.years }}</div>
+        <div class="resume__item__orb" data-aos="fade-up"></div>
+        <div class="resume__item__name" data-aos="fade-up">{{ item.businessName }}</div>
+        <div class="resume__item__position" data-aos="fade-up">{{ item.position }}</div>
+        <div class="resume__item__years" data-aos="fade-up">{{ item.years }}</div>
       </div>
       <div class="resume__item__description">
-        <p *ngIf="item.description?.simple" data-aos="fade-up" data-aos-delay="">
+        <p *ngIf="item.description?.simple" data-aos="fade-up">
           {{ item.description.simple }}
         </p>
         <ul *ngIf="item.description?.items && item.description?.items.length > 0">
-          <li *ngFor="let bullet of item.description.items" data-aos="fade-up" data-aos-delay="">{{ bullet }}</li>
+          <li *ngFor="let bullet of item.description.items" data-aos="fade-up">{{ bullet }}</li>
         </ul>
       </div>
     </div>

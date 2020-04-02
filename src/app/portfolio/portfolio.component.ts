@@ -16,7 +16,9 @@ export class PortfolioComponent implements OnInit {
     AOS.init({
       once: true,
       easing: 'swift-in-out',
-      duration: 500
+      duration: 500,
+      anchorPlacement: 'bottom-bottom',
+      offset: 200
     });
     this.sidenavToggle.isOpened.subscribe(nextState => {
       this.sidenavOpened = nextState;
