@@ -16,6 +16,9 @@ $navbar-padding-h: 48px;
   @include on-tablet-and-below {
     display: flex;
     align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
   }
 
   &__pseudo-background {
