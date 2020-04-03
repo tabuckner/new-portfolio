@@ -1,7 +1,7 @@
 exports.config = {
   projectRoot: "./src",
   projectName: "portfolio",
-  outDir: './dist/static',
+  outDir: 'docs',
   routes: {
     '/projects/:slug': {
       type: 'contentFolder',

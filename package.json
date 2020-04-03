@@ -4,11 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --ssl",
-    "build": "ng build",
+    "build": "ng build --prod --base-href=\"https://tabuckner.github.io\"",
+    "build:prod": "yarn build && yarn scully:build && cp ./docs/index.html ./docs/404.html",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
+    "scully:build": "yarn scully --nw",
     "scully:serve": "scully serve"
   },
   "private": true,
